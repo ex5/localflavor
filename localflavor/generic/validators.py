@@ -450,5 +450,5 @@ class VATINValidator:
 def validate_country_postcode(value, alpha2_country_code):
     validator = POSTCODE_VALIDATORS.get(alpha2_country_code)
     if validator:
-        return validator(value)
+        return validator.clean(value)
     return value

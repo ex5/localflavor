@@ -69,7 +69,7 @@ class RegexValidator(CharValidator):
 
     def clean(self, value):
         value = super(RegexValidator, self).clean(value)
-        if not self.regex.search(value):
+        if not self._is_valid(value):
             raise ValidationError(self.error_messages['invalid'])
         return value
 
