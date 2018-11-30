@@ -26,7 +26,7 @@ class NLZipCodeField(RegexValidator):
 
     def clean(self, value):
         if int(value[:4]) < 1000:
-            raise ValidationError(self.error_message)
+            raise ValidationError(self.error_messages['invalid'])
 
         if isinstance(value, six.string_types):
             value = value.upper().replace(' ', '')
