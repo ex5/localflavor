@@ -6,7 +6,7 @@ from localflavor.base import RegexValidator
 from localflavor.stub import _
 
 
-class SGPostCodeField(RegexValidator):
+class SGPostalCodeField(RegexValidator):
     """
     Singapore post code field.
 
@@ -18,4 +18,4 @@ class SGPostCodeField(RegexValidator):
     }
 
     def __init__(self, *args, **kwargs):
-        super(SGPostCodeField, self).__init__(r'^\d{6}$', *args, **kwargs)
+        super(SGPostalCodeField, self).__init__(r'^\d{6}$', *args, **kwargs)

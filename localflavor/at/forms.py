@@ -11,7 +11,7 @@ from .at_states import STATE_CHOICES
 re_ssn = re.compile(r'^\d{4} \d{6}')
 
 
-class ATZipCodeField(RegexValidator):
+class ATPostalCodeField(RegexValidator):
     """
     A form field that validates its input is an Austrian postcode.
 
@@ -19,11 +19,11 @@ class ATZipCodeField(RegexValidator):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a zip code in the format XXXX.'),
+        'invalid': _('Enter a postal code in the format XXXX.'),
     }
 
     def __init__(self, *args, **kwargs):
-        super(ATZipCodeField, self).__init__(r'^[1-9]{1}\d{3}$', *args, **kwargs)
+        super(ATPostalCodeField, self).__init__(r'^[1-9]{1}\d{3}$', *args, **kwargs)
 
 
 class ATStateSelect(Select):

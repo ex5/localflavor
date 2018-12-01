@@ -10,7 +10,7 @@ from localflavor.stub import _
 from .nl_provinces import PROVINCE_CHOICES
 
 
-class NLZipCodeField(RegexValidator):
+class NLPostalCodeField(RegexValidator):
     """
     Validation for Dutch zip codes.
 
@@ -18,14 +18,14 @@ class NLZipCodeField(RegexValidator):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a valid zip code in the format NNNN XX.')
+        'invalid': _('Enter a valid postal code in the format NNNN XX.')
     }
 
     def __init__(self):
-        super(NLZipCodeField, self).__init__(regex=r'^\d{4} ?[A-Z]{2}$')
+        super(NLPostalCodeField, self).__init__(regex=r'^\d{4} ?[A-Z]{2}$')
 
     def clean(self, value):
-        value = super(NLZipCodeField, self).clean(value)
+        value = super(NLPostalCodeField, self).clean(value)
 
         if int(value[:4]) < 1000:
             raise ValidationError(self.error_messages['invalid'])
@@ -36,7 +36,7 @@ class NLZipCodeField(RegexValidator):
             if len(value) == 6:
                 value = '%s %s' % (value[:4], value[4:])
 
-        return super(NLZipCodeField, self).clean(value)
+        return super(NLPostalCodeField, self).clean(value)
 
 
 class NLProvinceSelect(Select):

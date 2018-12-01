@@ -23,18 +23,18 @@ class PTRegionSelect(Select):
         super(PTRegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
 
 
-class PTZipCodeField(RegexValidator):
+class PTPostalCodeField(RegexValidator):
     """
     A field which validates Portuguese zip codes.
 
     NOTE
-    - Zip codes have the format XYYY-YYY (where X is a digit between 1 and 9 and Y is any other digit).
+    - Postcode codes have the format XYYY-YYY (where X is a digit between 1 and 9 and Y is any other digit).
     """
 
     default_error_messages = {
-        'invalid': _('Zip codes must be in the format XYYY-YYY'
+        'invalid': _('Enter a postal code in the format XYYY-YYY'
                      ' (where X is a digit between 1 and 9 and Y is any other digit).'),
     }
 
     def __init__(self, *args, **kwargs):
-        super(PTZipCodeField, self).__init__(ZIP_CODE_REGEX, *args, **kwargs)
+        super(PTPostalCodeField, self).__init__(ZIP_CODE_REGEX, *args, **kwargs)

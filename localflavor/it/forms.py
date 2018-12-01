@@ -9,7 +9,7 @@ from .it_province import PROVINCE_CHOICES
 from .it_region import REGION_CHOICES, REGION_PROVINCE_CHOICES
 
 
-class ITZipCodeField(RegexValidator):
+class ITPostalCodeField(RegexValidator):
     """
     A form field that validates input as an Italian zip code.
 
@@ -21,7 +21,7 @@ class ITZipCodeField(RegexValidator):
     }
 
     def __init__(self, *args, **kwargs):
-        super(ITZipCodeField, self).__init__(r'^\d{5}$', *args, **kwargs)
+        super(ITPostalCodeField, self).__init__(r'^\d{5}$', *args, **kwargs)
 
 
 class ITRegionSelect(Select):

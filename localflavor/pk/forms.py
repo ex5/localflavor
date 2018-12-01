@@ -12,7 +12,7 @@ from .pk_states import STATE_CHOICES
 POSTCODE_DIGITS_RE = re.compile(r'^(\d{5})$')
 
 
-class PKPostCodeField(RegexValidator):
+class PKPostalCodeField(RegexValidator):
     """
     Pakistani post code field.
 
@@ -24,7 +24,7 @@ class PKPostCodeField(RegexValidator):
     }
 
     def __init__(self, *args, **kwargs):
-        super(PKPostCodeField, self).__init__(POSTCODE_DIGITS_RE, *args, **kwargs)
+        super(PKPostalCodeField, self).__init__(POSTCODE_DIGITS_RE, *args, **kwargs)
 
 
 class PKStateSelect(Select):

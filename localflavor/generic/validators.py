@@ -7,51 +7,51 @@ import string
 from localflavor.exceptions import ValidationError
 from localflavor.stub import _
 from localflavor.ar.forms import ARPostalCodeField
-from localflavor.at.forms import ATZipCodeField
-from localflavor.au.forms import AUPostCodeField
+from localflavor.at.forms import ATPostalCodeField
+from localflavor.au.forms import AUPostalCodeField
 from localflavor.be.forms import BEPostalCodeField
-from localflavor.br.forms import BRZipCodeField
+from localflavor.br.forms import BRPostalCodeField
 from localflavor.ca.forms import CAPostalCodeField
-from localflavor.ch.forms import CHZipCodeField
-from localflavor.cn.forms import CNPostCodeField
+from localflavor.ch.forms import CHPostalCodeField
+from localflavor.cn.forms import CNPostalCodeField
 from localflavor.cu.forms import CUPostalCodeField
 from localflavor.cz.forms import CZPostalCodeField
-from localflavor.de.forms import DEZipCodeField
+from localflavor.de.forms import DEPostalCodeField
 from localflavor.dk.forms import DKPostalCodeField
-from localflavor.ee.forms import EEZipCodeField
+from localflavor.ee.forms import EEPostalCodeField
 from localflavor.es.forms import ESPostalCodeField
-from localflavor.fi.forms import FIZipCodeField
-from localflavor.fr.forms import FRZipCodeField
-from localflavor.gb.forms import GBPostcodeField
+from localflavor.fi.forms import FIPostalCodeField
+from localflavor.fr.forms import FRPostalCodeField
+from localflavor.gb.forms import GBPostalCodeField
 from localflavor.gr.forms import GRPostalCodeField
 from localflavor.hr.forms import HRPostalCodeField
-from localflavor.id_.forms import IDPostCodeField
+from localflavor.id_.forms import IDPostalCodeField
 from localflavor.il.forms import ILPostalCodeField
-from localflavor.in_.forms import INZipCodeField
+from localflavor.in_.forms import INPostalCodeField
 from localflavor.is_.forms import ISPostalCodeField
-from localflavor.it.forms import ITZipCodeField
+from localflavor.it.forms import ITPostalCodeField
 from localflavor.jp.forms import JPPostalCodeField
 from localflavor.lt.forms import LTPostalCodeField
 from localflavor.lv.forms import LVPostalCodeField
 from localflavor.ma.forms import MAPostalCodeField
 from localflavor.mt.forms import MTPostalCodeField
-from localflavor.mx.forms import MXZipCodeField
-from localflavor.nl.forms import NLZipCodeField
-from localflavor.no.forms import NOZipCodeField
-from localflavor.nz.forms import NZPostCodeField
-from localflavor.pk.forms import PKPostCodeField
+from localflavor.mx.forms import MXPostalCodeField
+from localflavor.nl.forms import NLPostalCodeField
+from localflavor.no.forms import NOPostalCodeField
+from localflavor.nz.forms import NZPostalCodeField
+from localflavor.pk.forms import PKPostalCodeField
 from localflavor.pl.forms import PLPostalCodeField
-from localflavor.pt.forms import PTZipCodeField
+from localflavor.pt.forms import PTPostalCodeField
 from localflavor.ro.forms import ROPostalCodeField
 from localflavor.ru.forms import RUPostalCodeField
 from localflavor.se.forms import SEPostalCodeField
-from localflavor.sg.forms import SGPostCodeField
+from localflavor.sg.forms import SGPostalCodeField
 from localflavor.si.forms import SIPostalCodeField
 from localflavor.sk.forms import SKPostalCodeField
 from localflavor.tr.forms import TRPostalCodeField
 from localflavor.ua.forms import UAPostalCodeField
 from localflavor.us.forms import USZipCodeField
-from localflavor.za.forms import ZAPostCodeField
+from localflavor.za.forms import ZAPostalCodeField
 
 
 from . import checksums
@@ -60,51 +60,51 @@ from .countries.iso_3166 import ISO_3166_1_ALPHA2_COUNTRY_CODES
 
 POSTCODE_VALIDATORS = {
     'AR': ARPostalCodeField(),
-    'AT': ATZipCodeField(),
-    'AU': AUPostCodeField(),
+    'AT': ATPostalCodeField(),
+    'AU': AUPostalCodeField(),
     'BE': BEPostalCodeField(),
-    'BR': BRZipCodeField(),
+    'BR': BRPostalCodeField(),
     'CA': CAPostalCodeField(),
-    'CH': CHZipCodeField(),
-    'CN': CNPostCodeField(),
+    'CH': CHPostalCodeField(),
+    'CN': CNPostalCodeField(),
     'CU': CUPostalCodeField(),
     'CZ': CZPostalCodeField(),
-    'DE': DEZipCodeField(),
+    'DE': DEPostalCodeField(),
     'DK': DKPostalCodeField(),
-    'EE': EEZipCodeField(),
+    'EE': EEPostalCodeField(),
     'ES': ESPostalCodeField(),
-    'FI': FIZipCodeField(),
-    'FR': FRZipCodeField(),
-    'GB': GBPostcodeField(),
+    'FI': FIPostalCodeField(),
+    'FR': FRPostalCodeField(),
+    'GB': GBPostalCodeField(),
     'GR': GRPostalCodeField(),
     'HR': HRPostalCodeField(),
-    'ID': IDPostCodeField(),
+    'ID': IDPostalCodeField(),
     'IL': ILPostalCodeField(),
-    'IN': INZipCodeField(),
+    'IN': INPostalCodeField(),
     'IS': ISPostalCodeField(),
-    'IT': ITZipCodeField(),
+    'IT': ITPostalCodeField(),
     'JP': JPPostalCodeField(),
     'LT': LTPostalCodeField(),
     'LV': LVPostalCodeField(),
     'MA': MAPostalCodeField(),
     'MT': MTPostalCodeField(),
-    'MX': MXZipCodeField(),
-    'NL': NLZipCodeField(),
-    'NO': NOZipCodeField(),
-    'NZ': NZPostCodeField(),
-    'PK': PKPostCodeField(),
+    'MX': MXPostalCodeField(),
+    'NL': NLPostalCodeField(),
+    'NO': NOPostalCodeField(),
+    'NZ': NZPostalCodeField(),
+    'PK': PKPostalCodeField(),
     'PL': PLPostalCodeField(),
-    'PT': PTZipCodeField(),
+    'PT': PTPostalCodeField(),
     'RO': ROPostalCodeField(),
     'RU': RUPostalCodeField(),
     'SE': SEPostalCodeField(),
-    'SG': SGPostCodeField(),
+    'SG': SGPostalCodeField(),
     'SI': SIPostalCodeField(),
     'SK': SKPostalCodeField(),
     'TR': TRPostalCodeField(),
     'UA': UAPostalCodeField(),
     'US': USZipCodeField(),
-    'ZA': ZAPostCodeField(),
+    'ZA': ZAPostalCodeField(),
 }
 
 # Dictionary of ISO country code to IBAN length.

@@ -7,7 +7,7 @@ from localflavor.base import RegexValidator
 from localflavor.stub import _
 
 
-class FRZipCodeField(RegexValidator):
+class FRPostalCodeField(RegexValidator):
     """
     Validate local French zip code.
 
@@ -15,11 +15,10 @@ class FRZipCodeField(RegexValidator):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a ZIP code in the format XXXXX.'),
+        'invalid': _('Enter a postal code in the format XXXXX.'),
     }
 
     def __init__(self, *args, **kwargs):
-        kwargs.setdefault('label', _('Zip code'))
         kwargs['max_length'] = 5
         kwargs['min_length'] = 5
-        super(FRZipCodeField, self).__init__(r'^\d{5}$', *args, **kwargs)
+        super(FRPostalCodeField, self).__init__(r'^\d{5}$', *args, **kwargs)

@@ -15,18 +15,18 @@ class MXStateSelect(Select):
         super(MXStateSelect, self).__init__(attrs, choices=STATE_CHOICES)
 
 
-class MXZipCodeField(RegexValidator):
+class MXPostalCodeField(RegexValidator):
     """
-    A form field that accepts a Mexican Zip Code.
+    A form field that accepts a Mexican Postcode Code.
 
     More info about this:
         http://en.wikipedia.org/wiki/List_of_postal_codes_in_Mexico
     """
 
     default_error_messages = {
-        'invalid': _('Enter a valid ZIP code in the format XXXXX.'),
+        'invalid': _('Enter a valid postal code in the format XXXXX.'),
     }
 
     def __init__(self, *args, **kwargs):
         zip_code_re = r'^(0[1-9]|[1][0-6]|[2-9]\d)(\d{3})$'
-        super(MXZipCodeField, self).__init__(zip_code_re, *args, **kwargs)
+        super(MXPostalCodeField, self).__init__(zip_code_re, *args, **kwargs)
