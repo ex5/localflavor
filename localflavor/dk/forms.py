@@ -13,7 +13,7 @@ class DKPostalCodeField(ChoiceField):
     """An Input widget that uses a list of Danish postal codes as valid input."""
 
     default_error_messages = {
-        'invalid': _('Enter a postal code in the format XXXX.')
+        'invalid': _('Enter a valid postal code in the format XXXX.')
     }
     choices = DK_POSTALCODES
 

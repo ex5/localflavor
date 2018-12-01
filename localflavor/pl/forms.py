@@ -31,7 +31,7 @@ class PLPostalCodeField(RegexValidator):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a postal code in the format XX-XXX.'),
+        'invalid': _('Enter a valid postal code in the format XX-XXX.'),
     }
 
     def __init__(self, *args, **kwargs):

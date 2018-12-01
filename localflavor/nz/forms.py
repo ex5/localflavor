@@ -31,5 +31,4 @@ class NZPostalCodeField(RegexValidator):
     }
 
     def __init__(self, *args, **kwargs):
-        super(NZPostalCodeField, self).__init__(r'^\d{4}$',
-                                              *args, **kwargs)
+        super(NZPostalCodeField, self).__init__(r'^\d{4}$', *args, **kwargs)
