@@ -25,6 +25,8 @@ class NLZipCodeField(RegexValidator):
         super(NLZipCodeField, self).__init__(regex=r'^\d{4} ?[A-Z]{2}$')
 
     def clean(self, value):
+        value = super(NLZipCodeField, self).clean(value)
+
         if int(value[:4]) < 1000:
             raise ValidationError(self.error_messages['invalid'])
 
