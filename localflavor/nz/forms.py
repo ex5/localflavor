@@ -23,7 +23,7 @@ class NZProvinceSelect(Select):
         super(NZProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
 
 
-class NZPostCodeField(RegexValidator):
+class NZPostalCodeField(RegexValidator):
     """A form field that validates its input as New Zealand postal code."""
 
     default_error_messages = {
@@ -31,5 +31,5 @@ class NZPostCodeField(RegexValidator):
     }
 
     def __init__(self, *args, **kwargs):
-        super(NZPostCodeField, self).__init__(r'^\d{4}$',
+        super(NZPostalCodeField, self).__init__(r'^\d{4}$',
                                               *args, **kwargs)

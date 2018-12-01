@@ -11,7 +11,7 @@ from localflavor.stub import _
 from .gb_regions import GB_NATIONS_CHOICES, GB_REGION_CHOICES
 
 
-class GBPostcodeField(CharValidator):
+class GBPostalCodeField(CharValidator):
     """
     A form field that validates its input is a UK postcode.
 
@@ -30,7 +30,7 @@ class GBPostcodeField(CharValidator):
     space_regex = re.compile(r' *(%s)$' % incode_pattern)
 
     def clean(self, value):
-        value = super(GBPostcodeField, self).clean(value)
+        value = super(GBPostalCodeField, self).clean(value)
         if value in self.empty_values:
             return self.empty_value
         postcode = value.upper().strip()

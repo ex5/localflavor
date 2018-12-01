@@ -12,18 +12,18 @@ from localflavor.stub import _
 from .in_states import STATE_CHOICES, STATES_NORMALIZED
 
 
-class INZipCodeField(RegexValidator):
+class INPostalCodeField(RegexValidator):
     """A form field that validates input as an Indian zip code, with the format XXXXXXX."""
 
     default_error_messages = {
-        'invalid': _('Enter a zip code in the format XXXXXX or XXX XXX.'),
+        'invalid': _('Enter a postal code in the format XXXXXX or XXX XXX.'),
     }
 
     def __init__(self, *args, **kwargs):
-        super(INZipCodeField, self).__init__(r'^\d{3}\s?\d{3}$', *args, **kwargs)
+        super(INPostalCodeField, self).__init__(r'^\d{3}\s?\d{3}$', *args, **kwargs)
 
     def clean(self, value):
-        value = super(INZipCodeField, self).clean(value)
+        value = super(INPostalCodeField, self).clean(value)
         if value in self.empty_values:
             return self.empty_value
         # Convert to "NNNNNN" if "NNN NNN" given

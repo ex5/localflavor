@@ -9,7 +9,7 @@ from .cn_provinces import CN_PROVINCE_CHOICES
 
 __all__ = (
     'CNProvinceSelect',
-    'CNPostCodeField',
+    'CNPostalCodeField',
 )
 
 
@@ -62,7 +62,7 @@ class CNProvinceSelect(Select):
         super(CNProvinceSelect, self).__init__(attrs, choices=CN_PROVINCE_CHOICES)
 
 
-class CNPostCodeField(RegexValidator):
+class CNPostalCodeField(RegexValidator):
     """
     A form field that validates input as postal codes in mainland China.
 
@@ -74,4 +74,4 @@ class CNPostCodeField(RegexValidator):
     }
 
     def __init__(self, *args, **kwargs):
-        super(CNPostCodeField, self).__init__(POST_CODE_RE, *args, **kwargs)
+        super(CNPostalCodeField, self).__init__(POST_CODE_RE, *args, **kwargs)

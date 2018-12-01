@@ -12,7 +12,7 @@ from .ch_states import STATE_CHOICES
 zip_re = re.compile(r'^[1-9]\d{3}$')
 
 
-class CHZipCodeField(RegexValidator):
+class CHPostalCodeField(RegexValidator):
     """
     A form field that validates input as a Swiss zip code.
 
@@ -27,7 +27,7 @@ class CHZipCodeField(RegexValidator):
     }
 
     def __init__(self, *args, **kwargs):
-        super(CHZipCodeField, self).__init__(zip_re, *args, **kwargs)
+        super(CHPostalCodeField, self).__init__(zip_re, *args, **kwargs)
 
 
 class CHStateSelect(Select):

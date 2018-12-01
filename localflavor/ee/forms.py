@@ -10,7 +10,7 @@ from .ee_counties import COUNTY_CHOICES
 zipcode = re.compile(r'^[1-9]\d{4}$')
 
 
-class EEZipCodeField(RegexValidator):
+class EEPostalCodeField(RegexValidator):
     """
     A form field that validates input as a Estonian zip code.
 
@@ -18,11 +18,11 @@ class EEZipCodeField(RegexValidator):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a zip code in the format XXXXX.'),
+        'invalid': _('Enter a postal code in the format XXXXX.'),
     }
 
     def __init__(self, *args, **kwargs):
-        super(EEZipCodeField, self).__init__(zipcode, *args, **kwargs)
+        super(EEPostalCodeField, self).__init__(zipcode, *args, **kwargs)
 
 
 class EECountySelect(Select):

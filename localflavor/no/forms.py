@@ -8,7 +8,7 @@ from localflavor.stub import _
 from .no_municipalities import MUNICIPALITY_CHOICES
 
 
-class NOZipCodeField(RegexValidator):
+class NOPostalCodeField(RegexValidator):
     """
     A form field that validates input as a Norwegian zip code.
 
@@ -16,11 +16,11 @@ class NOZipCodeField(RegexValidator):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a ZIP code in the format XXXX.'),
+        'invalid': _('Enter a postal code in the format XXXX.'),
     }
 
     def __init__(self, *args, **kwargs):
-        super(NOZipCodeField, self).__init__(r'^\d{4}$', *args, **kwargs)
+        super(NOPostalCodeField, self).__init__(r'^\d{4}$', *args, **kwargs)
 
 
 class NOMunicipalitySelect(Select):

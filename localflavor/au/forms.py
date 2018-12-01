@@ -8,7 +8,7 @@ from localflavor.stub import _
 from .au_states import STATE_CHOICES
 
 
-class AUPostCodeField(RegexValidator):
+class AUPostalCodeField(RegexValidator):
     """
     Australian post code field.
 
@@ -21,7 +21,7 @@ class AUPostCodeField(RegexValidator):
     }
 
     def __init__(self, max_length=4, *args, **kwargs):
-        super(AUPostCodeField, self).__init__(r'^\d{4}$', max_length=max_length, *args, **kwargs)
+        super(AUPostalCodeField, self).__init__(r'^\d{4}$', max_length=max_length, *args, **kwargs)
 
 
 class AUStateSelect(Select):

@@ -8,18 +8,18 @@ from localflavor.stub import _
 from .de_states import STATE_CHOICES
 
 
-class DEZipCodeField(RegexValidator):
+class DEPostalCodeField(RegexValidator):
     """A form field that validates input as a German zip code.
 
     Valid zip codes consist of five digits.
     """
 
     default_error_messages = {
-        'invalid': _('Enter a zip code in the format XXXXX.'),
+        'invalid': _('Enter a postal code in the format XXXXX.'),
     }
 
     def __init__(self, *args, **kwargs):
-        super(DEZipCodeField, self).__init__(r'^([0]{1}[1-9]{1}|[1-9]{1}[0-9]{1})[0-9]{3}$', *args, **kwargs)
+        super(DEPostalCodeField, self).__init__(r'^([0]{1}[1-9]{1}|[1-9]{1}[0-9]{1})[0-9]{3}$', *args, **kwargs)
 
 
 class DEStateSelect(Select):

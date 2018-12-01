@@ -14,7 +14,7 @@ class PostcodeValidatorsPerCountryTest(TestCase):
     def test_validate_postcode_at(self):
         validate_country_postcode('1234', 'AT')
 
-        with self.assertRaisesRegex(ValidationError, 'Enter a zip code in the format XXXX.'):
+        with self.assertRaisesRegex(ValidationError, 'Enter a postal code in the format XXXX.'):
             validate_country_postcode('AB 1234', 'AT')
 
     def test_validate_postcode_au(self):
@@ -32,7 +32,7 @@ class PostcodeValidatorsPerCountryTest(TestCase):
     def test_validate_postcode_br(self):
         validate_country_postcode('12345-111', 'BR')
 
-        with self.assertRaisesRegex(ValidationError, 'Enter a zip code in the format XXXXX-XXX.'):
+        with self.assertRaisesRegex(ValidationError, 'Enter a postal code in the format XXXXX-XXX.'):
             validate_country_postcode('AB 1234', 'BR')
 
     def test_validate_postcode_ca(self):
@@ -68,7 +68,7 @@ class PostcodeValidatorsPerCountryTest(TestCase):
     def test_validate_postcode_de(self):
         validate_country_postcode('12345', 'DE')
 
-        with self.assertRaisesRegex(ValidationError, 'Enter a zip code in the format XXXXX.'):
+        with self.assertRaisesRegex(ValidationError, 'Enter a postal code in the format XXXXX.'):
             validate_country_postcode('AB 1234', 'DE')
 
     def test_validate_postcode_dk(self):
@@ -80,7 +80,7 @@ class PostcodeValidatorsPerCountryTest(TestCase):
     def test_validate_postcode_ee(self):
         validate_country_postcode('12345', 'EE')
 
-        with self.assertRaisesRegex(ValidationError, 'Enter a zip code in the format XXXXX.'):
+        with self.assertRaisesRegex(ValidationError, 'Enter a postal code in the format XXXXX.'):
             validate_country_postcode('AB 1234', 'EE')
 
     def test_validate_postcode_es(self):
@@ -93,13 +93,13 @@ class PostcodeValidatorsPerCountryTest(TestCase):
     def test_validate_postcode_fi(self):
         validate_country_postcode('12345', 'FI')
 
-        with self.assertRaisesRegex(ValidationError, 'Enter a zip code in the format XXXXX.'):
+        with self.assertRaisesRegex(ValidationError, 'Enter a postal code in the format XXXXX.'):
             validate_country_postcode('AB 1234', 'FI')
 
     def test_validate_postcode_fr(self):
         validate_country_postcode('12345', 'FR')
 
-        with self.assertRaisesRegex(ValidationError, 'Enter a ZIP code in the format XXXXX.'):
+        with self.assertRaisesRegex(ValidationError, 'Enter a postal code in the format XXXXX.'):
             validate_country_postcode('AB 1234', 'FR')
 
     def test_validate_postcode_gb(self):
@@ -140,7 +140,7 @@ class PostcodeValidatorsPerCountryTest(TestCase):
         validate_country_postcode('123456', 'IN')
         validate_country_postcode('123 456', 'IN')
 
-        with self.assertRaisesRegex(ValidationError, 'Enter a zip code in the format XXXXXX or XXX XXX.'):
+        with self.assertRaisesRegex(ValidationError, 'Enter a postal code in the format XXXXXX or XXX XXX.'):
             validate_country_postcode('AB 1234', 'IN')
 
     def test_validate_postcode_is(self):
@@ -190,19 +190,19 @@ class PostcodeValidatorsPerCountryTest(TestCase):
     def test_validate_postcode_mx(self):
         validate_country_postcode('01162', 'MX')
 
-        with self.assertRaisesRegex(ValidationError, 'Enter a valid ZIP code in the format XXXXX.'):
+        with self.assertRaisesRegex(ValidationError, 'Enter a valid postal code in the format XXXXX.'):
             validate_country_postcode('17345', 'MX')
 
     def test_validate_postcode_nl(self):
         validate_country_postcode('1234 AB', 'NL')
 
-        with self.assertRaisesRegex(ValidationError, 'Enter a valid zip code in the format NNNN XX.'):
+        with self.assertRaisesRegex(ValidationError, 'Enter a valid postal code in the format NNNN XX.'):
             validate_country_postcode('AB 1234', 'NL')
 
     def test_validate_postcode_no(self):
         validate_country_postcode('1234', 'NO')
 
-        with self.assertRaisesRegex(ValidationError, 'Enter a ZIP code in the format XXXX.'):
+        with self.assertRaisesRegex(ValidationError, 'Enter a postal code in the format XXXX.'):
             validate_country_postcode('AB 1234', 'NO')
 
     def test_validate_postcode_nz(self):
@@ -226,7 +226,7 @@ class PostcodeValidatorsPerCountryTest(TestCase):
     def test_validate_postcode_pt(self):
         validate_country_postcode('9245-222', 'PT')
 
-        with self.assertRaisesRegex(ValidationError, 'Zip codes must be in the format XYYY-YYY'):
+        with self.assertRaisesRegex(ValidationError, 'Enter a postal code in the format XYYY-YYY'):
             validate_country_postcode('AB 1234', 'PT')
 
     def test_validate_postcode_ro(self):

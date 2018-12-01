@@ -12,7 +12,7 @@ from localflavor.stub import _
 postcode_re = re.compile(r'^[1-9]\d{4}$')
 
 
-class IDPostCodeField(CharValidator):
+class IDPostalCodeField(CharValidator):
     """
     An Indonesian post code field.
 
@@ -24,7 +24,7 @@ class IDPostCodeField(CharValidator):
     }
 
     def clean(self, value):
-        super(IDPostCodeField, self).clean(value)
+        super(IDPostalCodeField, self).clean(value)
         if value in EMPTY_VALUES:
             return self.empty_value
 

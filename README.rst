@@ -35,7 +35,7 @@ Postal code validation
        value = super(RegexValidator, self).clean(value)
      File "../localflavor/base.py", line 48, in clean
        raise ValidationError(self.error_messages['invalid'])
-   localflavor.exceptions.ValidationError: Enter a zip code in the format XXXXX or XXXXX-XXXX.
+   localflavor.exceptions.ValidationError: Enter a postal code in the format XXXXX or XXXXX-XXXX.
 
 
 Calling codes

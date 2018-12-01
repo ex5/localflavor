@@ -5,7 +5,7 @@ from localflavor.base import RegexValidator, Select
 from localflavor.stub import _
 
 
-class ZAPostCodeField(RegexValidator):
+class ZAPostalCodeField(RegexValidator):
     """
     A form field that validates input as a South African postcode.
 
@@ -17,7 +17,7 @@ class ZAPostCodeField(RegexValidator):
     }
 
     def __init__(self, *args, **kwargs):
-        super(ZAPostCodeField, self).__init__(r'^\d{4}$', *args, **kwargs)
+        super(ZAPostalCodeField, self).__init__(r'^\d{4}$', *args, **kwargs)
 
 
 class ZAProvinceSelect(Select):

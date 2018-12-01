@@ -8,7 +8,7 @@ from localflavor.stub import _
 from .fi_municipalities import MUNICIPALITY_CHOICES
 
 
-class FIZipCodeField(RegexValidator):
+class FIPostalCodeField(RegexValidator):
     """
     A form field that validates input as a Finnish zip code.
 
@@ -16,11 +16,11 @@ class FIZipCodeField(RegexValidator):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a zip code in the format XXXXX.'),
+        'invalid': _('Enter a postal code in the format XXXXX.'),
     }
 
     def __init__(self, *args, **kwargs):
-        super(FIZipCodeField, self).__init__(r'^\d{5}$', *args, **kwargs)
+        super(FIPostalCodeField, self).__init__(r'^\d{5}$', *args, **kwargs)
 
 
 class FIMunicipalitySelect(Select):
