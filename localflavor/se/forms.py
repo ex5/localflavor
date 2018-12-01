@@ -34,7 +34,7 @@ class SEPostalCodeField(RegexValidator):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a Swedish postal code in the format XXXXX.'),
+        'invalid': _('Enter a Swedish postal code in the format XXXXX or XXX XX.'),
     }
 
     def __init__(self, *args, **kwargs):

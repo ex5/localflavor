@@ -12,7 +12,7 @@ class GRPostalCodeField(RegexValidator):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a valid 5-digit greek postal code.'),
+        'invalid': _('Enter a valid 5-digit postal code.'),
     }
 
     def __init__(self, *args, **kwargs):

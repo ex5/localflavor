@@ -13,7 +13,7 @@ class ZAPostCodeField(RegexValidator):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a valid South African postal code'),
+        'invalid': _('Enter a valid South African postal code in the format XXXX.'),
     }
 
     def __init__(self, *args, **kwargs):

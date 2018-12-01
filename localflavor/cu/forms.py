@@ -31,7 +31,7 @@ class CURegionField(CharValidator):
     def clean(self, value):
         super(CURegionField, self).clean(value)
         if value in self.empty_values:
-            return ''
+            return self.empty_value
         try:
             return REGION_NORMALIZED[value.strip().lower()]
         except KeyError:
@@ -73,7 +73,7 @@ class CUProvinceField(CharValidator):
     def clean(self, value):
         super(CUProvinceField, self).clean(value)
         if value in self.empty_values:
-            return ''
+            return self.empty_value
         try:
             return PROVINCE_NORMALIZED[value.strip().lower()]
         except KeyError:

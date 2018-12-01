@@ -28,7 +28,7 @@ class ARPostalCodeField(RegexValidator):
     """
 
     default_error_messages = {
-        'invalid': _("Enter a postal code in the format NNNN or ANNNNAAA."),
+        'invalid': _('Enter a valid postal code in the format NNNN or ANNNNAAA.'),
     }
 
     def __init__(self, max_length=8, min_length=4, *args, **kwargs):

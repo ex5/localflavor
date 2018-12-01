@@ -20,13 +20,13 @@ class IDPostCodeField(CharValidator):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a valid post code'),
+        'invalid': _('Enter a valid 5 digit postal code.'),
     }
 
     def clean(self, value):
         super(IDPostCodeField, self).clean(value)
         if value in EMPTY_VALUES:
-            return ''
+            return self.empty_value
 
         value = value.strip()
         if not postcode_re.search(value):

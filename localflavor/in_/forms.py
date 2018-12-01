@@ -52,7 +52,7 @@ class INStateField(CharValidator):
     def clean(self, value):
         value = super(INStateField, self).clean(value)
         if value in EMPTY_VALUES:
-            return ''
+            return self.empty_value
         try:
             value = value.strip().lower()
         except AttributeError:

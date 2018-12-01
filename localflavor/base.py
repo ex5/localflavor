@@ -8,14 +8,19 @@ class CharValidator(object):
     default_error_messages = {
         'invalid': 'Invalid value.'
     }
-    empty_values = (None, )
+    empty_values = (None, '')
+    empty_value = None
     validators = []
     default_validators = []
+    choices = None
 
     def __init__(self, min_length=None, max_length=None, choices=None, **kwargs):
         self.min_length = min_length
         self.max_length = max_length
-        self.choices = None
+
+        self.choices = choices if choices else self.choices
+        self.choices = [str(_[0]) for _ in self.choices] if self.choices else self.choices
+
         self.error_messages = self.default_error_messages
         if 'message' in kwargs:
             self.error_messages = {'invalid': kwargs.pop('message')}
@@ -28,7 +33,7 @@ class CharValidator(object):
             return False
         if self.max_length and len(value) > self.max_length:
             return False
-        if self.choices and value not in self.choices:
+        if self.choices and str(value) not in self.choices:
             return False
         for validator in self.validators + self.default_validators:
             if not validator(value):

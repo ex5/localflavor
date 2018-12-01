@@ -27,7 +27,7 @@ class NZPostCodeField(RegexValidator):
     """A form field that validates its input as New Zealand postal code."""
 
     default_error_messages = {
-        'invalid': _('Invalid post code.'),
+        'invalid': _('Enter a 4 digit postal code.'),
     }
 
     def __init__(self, *args, **kwargs):

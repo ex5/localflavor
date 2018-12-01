@@ -15,7 +15,7 @@ class MTPostalCodeField(RegexValidator):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a valid postal code in format AAA 0000.'),
+        'invalid': _('Enter a valid postal code in format XXX NNNN.'),
     }
 
     def __init__(self, *args, **kwargs):

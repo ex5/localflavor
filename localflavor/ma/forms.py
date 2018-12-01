@@ -23,9 +23,6 @@ class MAPostalCodeField(RegexValidator):
     }
 
     def __init__(self, *args, **kwargs):
-        kwargs.setdefault('label', _('Postal code'))
-        kwargs['max_length'] = 5
-        kwargs['min_length'] = 5
         super(MAPostalCodeField, self).__init__(r'^\d{5}$', *args, **kwargs)
 
 

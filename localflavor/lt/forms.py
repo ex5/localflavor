@@ -42,7 +42,7 @@ class LTPostalCodeField(CharValidator):
     def clean(self, value):
         value = super(LTPostalCodeField, self).clean(value)
         if value in EMPTY_VALUES:
-            return ''
+            return self.empty_value
 
         match = re.match(postalcode, value)
         if not match:
