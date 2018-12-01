@@ -1,3 +1,6 @@
+.. image:: https://travis-ci.com/anka-sirota/localflavor.svg?branch=master
+    :target: https://travis-ci.com/anka-sirota/localflavor
+
 localflavor
 -----------
 
