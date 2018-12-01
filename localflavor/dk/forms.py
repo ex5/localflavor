@@ -2,22 +2,20 @@
 
 from __future__ import unicode_literals
 
-from localflavor.base import CharValidator, Select
-from localflavor.exceptions import ValidationError
+from localflavor.base import ChoiceField, Select
 from localflavor.stub import _
 
 from .dk_municipalities import DK_MUNICIPALITIES
 from .dk_postalcodes import DK_POSTALCODES
 
 
-class DKPostalCodeField(CharValidator):
+class DKPostalCodeField(ChoiceField):
     """An Input widget that uses a list of Danish postal codes as valid input."""
 
-    def clean(self, value):
-        value = super(DKPostalCodeField, self).clean(value)
-        if value not in [entry[0] for entry in DK_POSTALCODES]:
-            raise ValidationError(_('Enter a postal code in the format XXXX.'))
-        return value
+    default_error_messages = {
+        'invalid': _('Enter a postal code in the format XXXX.')
+    }
+    choices = DK_POSTALCODES
 
 
 class DKMunicipalitySelect(Select):

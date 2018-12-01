@@ -20,7 +20,7 @@ class PKPostCodeField(RegexValidator):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a 5 digit postcode.'),
+        'invalid': _('Enter a 5 digit postal code.'),
     }
 
     def __init__(self, *args, **kwargs):

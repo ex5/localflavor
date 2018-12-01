@@ -17,7 +17,7 @@ class AUPostCodeField(RegexValidator):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a 4 digit postcode.'),
+        'invalid': _('Enter a 4 digit postal code.'),
     }
 
     def __init__(self, max_length=4, *args, **kwargs):

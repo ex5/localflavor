@@ -22,7 +22,7 @@ class GBPostcodeField(CharValidator):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a valid postcode.'),
+        'invalid': _('Enter a valid postal code.'),
     }
     outcode_pattern = '[A-PR-UWYZ]([0-9]{1,2}|([A-HIK-Y][0-9](|[0-9]|[ABEHMNPRVWXY]))|[0-9][A-HJKSTUW])'
     incode_pattern = '[0-9][ABD-HJLNP-UW-Z]{2}'

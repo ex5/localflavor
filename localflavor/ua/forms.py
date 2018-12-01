@@ -28,7 +28,7 @@ class UAPostalCodeField(RegexValidator):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a valid postal code.'),
+        'invalid': _('Enter a valid postal code in the format XXXXX.'),
     }
 
     def __init__(self, *args, **kwargs):

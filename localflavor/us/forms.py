@@ -25,7 +25,7 @@ class USZipCodeField(RegexValidator):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a zip code in the format XXXXX or XXXXX-XXXX.'),
+        'invalid': _('Enter a ZIP code in the format XXXXX or XXXXX-XXXX.'),
     }
 
     def __init__(self, *args, **kwargs):
@@ -49,7 +49,7 @@ class USStateField(CharValidator):
         from .us_states import STATES_NORMALIZED
         super(USStateField, self).clean(value)
         if value in EMPTY_VALUES:
-            return ''
+            return self.empty_value
         try:
             value = value.strip().lower()
         except AttributeError:

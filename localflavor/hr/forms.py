@@ -31,13 +31,13 @@ class HRPostalCodeField(CharValidator):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a valid 5 digit postal code'),
+        'invalid': _('Enter a valid 5 digit postal code.'),
     }
 
     def clean(self, value):
         super(HRPostalCodeField, self).clean(value)
         if value in EMPTY_VALUES:
-            return ''
+            return self.empty_value
 
         value = value.strip()
         if not postal_code_re.search(value):

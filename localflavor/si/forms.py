@@ -3,12 +3,17 @@
 from __future__ import unicode_literals
 
 from localflavor.base import ChoiceField, Select
+from localflavor.stub import _
 
 from .si_postalcodes import SI_POSTALCODES_CHOICES
 
 
 class SIPostalCodeField(ChoiceField):
     """Slovenian post codes field."""
+
+    default_error_messages = {
+        'invalid': _('Enter a valid postal code in the format XXXX.'),
+    }
 
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('choices', SI_POSTALCODES_CHOICES)

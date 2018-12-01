@@ -36,7 +36,7 @@ class ROCountyField(CharValidator):
         super(ROCountyField, self).clean(value)
 
         if value in EMPTY_VALUES:
-            return ''
+            return self.empty_value
 
         try:
             value = value.strip().upper()
@@ -71,7 +71,7 @@ class ROPostalCodeField(RegexValidator):
     """Romanian postal code field."""
 
     default_error_messages = {
-        'invalid': _('Enter a valid postal code in the format XXXXXX'),
+        'invalid': _('Enter a valid postal code in the format XXXXXX.'),
     }
 
     def __init__(self, max_length=6, min_length=6, *args, **kwargs):

@@ -16,7 +16,7 @@ class NOZipCodeField(RegexValidator):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a zip code in the format XXXX.'),
+        'invalid': _('Enter a ZIP code in the format XXXX.'),
     }
 
     def __init__(self, *args, **kwargs):

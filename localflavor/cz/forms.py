@@ -41,6 +41,4 @@ class CZPostalCodeField(RegexValidator):
         Returns an empty string for empty values.
         """
         value = super(CZPostalCodeField, self).clean(value)
-        if value in self.empty_values:
-            return self.empty_value
         return value.replace(' ', '')

@@ -19,8 +19,7 @@ class BEPostalCodeField(RegexValidator):
     """
 
     default_error_messages = {
-        'invalid': _(
-            'Enter a valid postal code in the range and format 1XXX - 9XXX.'),
+        'invalid': _('Enter a valid postal code in the range and format 1XXX - 9XXX.'),
     }
 
     def __init__(self, *args, **kwargs):

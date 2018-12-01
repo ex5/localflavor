@@ -29,7 +29,7 @@ class LVPostalCodeField(CharValidator):
     def clean(self, value):
         value = super(LVPostalCodeField, self).clean(value)
         if value in EMPTY_VALUES:
-            return ''
+            return self.empty_value
 
         match = re.match(zipcode, value)
         if not match:

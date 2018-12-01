@@ -29,8 +29,6 @@ class CAPostalCodeField(CharValidator):
 
     def clean(self, value):
         value = super(CAPostalCodeField, self).clean(value)
-        if value in self.empty_values:
-            return self.empty_value
         postcode = value.upper().strip()
         m = self.postcode_regex.match(postcode)
         if not m:
@@ -53,7 +51,7 @@ class CAProvinceField(CharValidator):
     def clean(self, value):
         super(CAProvinceField, self).clean(value)
         if value in EMPTY_VALUES:
-            return ''
+            return self.empty_value
         try:
             value = value.strip().lower()
         except AttributeError:

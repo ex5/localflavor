@@ -17,7 +17,7 @@ class ITZipCodeField(RegexValidator):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a valid zip code.'),
+        'invalid': _('Enter a 5 digit ZIP code.'),
     }
 
     def __init__(self, *args, **kwargs):
