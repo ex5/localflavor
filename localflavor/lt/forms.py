@@ -36,7 +36,7 @@ class LTPostalCodeField(CharValidator):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a postal code in the format XXXXX or LT-XXXXX.'),
+        'invalid': _('Enter a valid postal code in the format XXXXX or LT-XXXXX.'),
     }
 
     def clean(self, value):

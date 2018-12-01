@@ -32,7 +32,7 @@ class PTPostalCodeField(RegexValidator):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a postal code in the format XYYY-YYY'
+        'invalid': _('Enter a valid postal code in the format XYYY-YYY'
                      ' (where X is a digit between 1 and 9 and Y is any other digit).'),
     }
 

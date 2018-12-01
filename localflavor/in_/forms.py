@@ -16,7 +16,7 @@ class INPostalCodeField(RegexValidator):
     """A form field that validates input as an Indian zip code, with the format XXXXXXX."""
 
     default_error_messages = {
-        'invalid': _('Enter a postal code in the format XXXXXX or XXX XXX.'),
+        'invalid': _('Enter a valid postal code in the format XXXXXX or XXX XXX.'),
     }
 
     def __init__(self, *args, **kwargs):

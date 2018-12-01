@@ -70,7 +70,7 @@ class CNPostalCodeField(RegexValidator):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a postal code in the format XXXXXX.'),
+        'invalid': _('Enter a valid postal code in the format XXXXXX.'),
     }
 
     def __init__(self, *args, **kwargs):

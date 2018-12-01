@@ -19,7 +19,7 @@ class ATPostalCodeField(RegexValidator):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a postal code in the format XXXX.'),
+        'invalid': _('Enter a valid postal code in the format XXXX.'),
     }
 
     def __init__(self, *args, **kwargs):

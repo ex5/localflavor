@@ -21,7 +21,7 @@ class CAPostalCodeField(CharValidator):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a postal code in the format XXX XXX.'),
+        'invalid': _('Enter a valid postal code in the format XXX XXX.'),
     }
 
     postcode_regex = re.compile(

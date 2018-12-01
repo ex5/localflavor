@@ -23,7 +23,7 @@ class LVPostalCodeField(CharValidator):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a postal code in the format XXXX or LV-XXXX.'),
+        'invalid': _('Enter a valid postal code in the format XXXX or LV-XXXX.'),
     }
 
     def clean(self, value):
