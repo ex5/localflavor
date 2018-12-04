@@ -25,6 +25,7 @@ class NLPostalCodeField(RegexValidator):
         super(NLPostalCodeField, self).__init__(regex=r'^\d{4} ?[A-Z]{2}$')
 
     def clean(self, value):
+        value = value.upper()
         value = super(NLPostalCodeField, self).clean(value)
 
         if int(value[:4]) < 1000:

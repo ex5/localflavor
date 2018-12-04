@@ -195,6 +195,7 @@ class PostcodeValidatorsPerCountryTest(TestCase):
 
     def test_validate_postcode_nl(self):
         validate_country_postcode('1234 AB', 'NL')
+        assert validate_country_postcode('1234 ab', 'NL') == '1234 AB'
 
         with self.assertRaisesRegex(ValidationError, 'Enter a valid postal code in the format NNNN XX.'):
             validate_country_postcode('AB 1234', 'NL')
