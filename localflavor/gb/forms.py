@@ -8,7 +8,7 @@ from localflavor.exceptions import ValidationError
 from localflavor.base import CharValidator, Select
 from localflavor.stub import _
 
-from .gb_regions import GB_NATIONS_CHOICES, GB_REGION_CHOICES
+from .gb_regions import NATIONS_CHOICES, REGION_CHOICES
 
 
 class GBPostalCodeField(CharValidator):
@@ -45,11 +45,11 @@ class GBCountySelect(Select):
     """A Select widget that uses a list of UK Counties/Regions as its choices."""
 
     def __init__(self, attrs=None):
-        super(GBCountySelect, self).__init__(attrs, choices=GB_REGION_CHOICES)
+        super(GBCountySelect, self).__init__(attrs, choices=REGION_CHOICES)
 
 
 class GBNationSelect(Select):
     """A Select widget that uses a list of UK Nations as its choices."""
 
     def __init__(self, attrs=None):
-        super(GBNationSelect, self).__init__(attrs, choices=GB_NATIONS_CHOICES)
+        super(GBNationSelect, self).__init__(attrs, choices=NATIONS_CHOICES)

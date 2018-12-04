@@ -1,7 +1,7 @@
 from localflavor.base import RegexValidator, Select
 from localflavor.stub import _
 
-from .ua_regions import UA_REGION_CHOICES
+from .ua_regions import REGION_CHOICES
 
 
 class UARegionSelect(Select):
@@ -12,7 +12,7 @@ class UARegionSelect(Select):
     """
 
     def __init__(self, *args, **kwargs):
-        kwargs['choices'] = UA_REGION_CHOICES
+        kwargs['choices'] = REGION_CHOICES
         super(UARegionSelect, self).__init__(*args, **kwargs)
 
 

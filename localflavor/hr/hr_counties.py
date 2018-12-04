@@ -5,7 +5,7 @@ from localflavor.stub import _
 
 #: Croatian Counties: http://en.wikipedia.org/wiki/ISO_3166-2:HR
 #: Croatia doesn't have official abbreviations for counties. The ones provided are in common use.
-HR_COUNTY_CHOICES = (
+COUNTY_CHOICES = (
     ('GZG', _('Grad Zagreb')),
     ('BBŽ', _('Bjelovarsko-bilogorska županija')),
     ('BPŽ', _('Brodsko-posavska županija')),

@@ -9,7 +9,7 @@ from localflavor.exceptions import ValidationError
 from localflavor.base import CharValidator, Select
 from localflavor.stub import _
 
-from .hr_choices import HR_COUNTY_CHOICES
+from .hr_counties import COUNTY_CHOICES
 
 postal_code_re = re.compile(r'^\d{5}$')
 
@@ -18,7 +18,7 @@ class HRCountySelect(Select):
     """A Select widget that uses a list of counties of Croatia as its choices."""
 
     def __init__(self, attrs=None):
-        super(HRCountySelect, self).__init__(attrs, choices=HR_COUNTY_CHOICES)
+        super(HRCountySelect, self).__init__(attrs, choices=COUNTY_CHOICES)
 
 
 class HRPostalCodeField(CharValidator):

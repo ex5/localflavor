@@ -2,7 +2,7 @@ from localflavor.stub import _
 
 #: 24 oblasts, Avtonomna Respublika Krym and 2 cities with special status
 # Codes were gotten from ISO 3166-2:UA
-UA_REGION_CHOICES = (
+REGION_CHOICES = (
     ('UA-71', _('Cherkasy Oblast')),
     ('UA-74', _('Chernihiv Oblast')),
     ('UA-77', _('Chernivtsi Oblast')),
