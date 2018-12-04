@@ -186,7 +186,7 @@ SCOTTISH_REGION_CHOICES = (
 
 
 #: Nations of the United Kingdom
-GB_NATIONS_CHOICES = (
+NATIONS_CHOICES = (
     ("England", _("England")),
     ("Northern Ireland", _("Northern Ireland")),
     ("Wales", _("Wales")),
@@ -195,7 +195,7 @@ GB_NATIONS_CHOICES = (
 
 
 #: All regions of United Kingdom
-GB_REGION_CHOICES = (ENGLAND_REGION_CHOICES +
-                     NORTHERN_IRELAND_REGION_CHOICES +
-                     WALES_REGION_CHOICES +
-                     SCOTTISH_REGION_CHOICES)
+REGION_CHOICES = (ENGLAND_REGION_CHOICES +
+                  NORTHERN_IRELAND_REGION_CHOICES +
+                  WALES_REGION_CHOICES +
+                  SCOTTISH_REGION_CHOICES)

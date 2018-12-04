@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*
 from __future__ import unicode_literals
-
-from .it_province import PROVINCES
+from .it_provinces import PROVINCES
 
 #: An alphabetical list of regions
 REGION_CHOICES = (

@@ -7,7 +7,7 @@ import re
 from localflavor.base import RegexValidator, Select
 from localflavor.stub import _
 
-from .ch_states import STATE_CHOICES
+from .ch_cantons import CANTON_CHOICES
 
 zip_re = re.compile(r'^[1-9]\d{3}$')
 
@@ -30,8 +30,8 @@ class CHPostalCodeField(RegexValidator):
         super(CHPostalCodeField, self).__init__(zip_re, *args, **kwargs)
 
 
-class CHStateSelect(Select):
-    """A Select widget that uses a list of CH states as its choices."""
+class CHCantonSelect(Select):
+    """A Select widget that uses a list of CH cantons as its choices."""
 
     def __init__(self, attrs=None):
-        super(CHStateSelect, self).__init__(attrs, choices=STATE_CHOICES)
+        super(CHCantonSelect, self).__init__(attrs, choices=CANTON_CHOICES)

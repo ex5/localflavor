@@ -2,7 +2,7 @@
 from localflavor.stub import _
 
 #: An alphabetical list of states
-STATE_CHOICES = (
+CANTON_CHOICES = (
     ('AG', _('Aargau')),
     ('AI', _('Appenzell Innerrhoden')),
     ('AR', _('Appenzell Ausserrhoden')),

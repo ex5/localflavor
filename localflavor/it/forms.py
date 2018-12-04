@@ -5,8 +5,8 @@ from __future__ import unicode_literals
 from localflavor.base import RegexValidator, Select
 from localflavor.stub import _
 
-from .it_province import PROVINCE_CHOICES
-from .it_region import REGION_CHOICES, REGION_PROVINCE_CHOICES
+from .it_provinces import PROVINCE_CHOICES
+from .it_regions import REGION_CHOICES, REGION_PROVINCE_CHOICES
 
 
 class ITPostalCodeField(RegexValidator):
