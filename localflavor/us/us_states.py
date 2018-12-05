@@ -108,38 +108,11 @@ OBSOLETE_STATES = (
     ('TT', _('Trust Territory of the Pacific Islands')),
 )
 
-US_STATES = lambda: tuple(sorted(
+STATE_CHOICES = sorted(
     CONTIGUOUS_STATES + NON_CONTIGUOUS_STATES,
-    key=operator.itemgetter(0))), tuple
-"""
-This docstring is not read by Sphinx, so it has been copied to
-docs/localflavor/us.rst.
+    key=operator.itemgetter(0))
 
-All US states.
-
-This tuple is lazily generated and may not work as expected in all cases due
-to tuple optimizations in the Python interpreter which do not account for
-lazily generated tuples.  For example::
-
-  US_STATES + ('XX', _('Select a State'))
-
-should work as expected, but::
-
-  ('XX', _('Select a State')) + US_STATES
-
-may throw:
-
-``TypeError: can only concatenate tuple (not "proxy") to tuple``
-
-due to a Python optimization that causes the concatenation to occur before
-US_STATES has been lazily generated.  To work around these issues, you
-can use a slice index (``[:]``) to force the generation of US_STATES
-before any other operations are processed by the Python interpreter::
-
-  ('XX', _('Select a State')) + US_STATES[:]
-"""
-
-STATE_CHOICES = tuple(sorted(
+ALL_STATE_CHOICES = tuple(sorted(
     CONTIGUOUS_STATES + NON_CONTIGUOUS_STATES + US_TERRITORIES + ARMED_FORCES_STATES,
     key=operator.itemgetter(1)))
 
