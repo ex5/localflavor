@@ -37,7 +37,7 @@ setup(
     author_email='dev.local@gmail.com',
     packages=find_packages(exclude=['tests', 'tests.*']),
     install_requires=[
-        'six==1.11.0',
+        'six>=1.11.0',
     ],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
